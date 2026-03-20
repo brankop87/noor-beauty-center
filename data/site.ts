@@ -6,21 +6,31 @@ export const siteData = {
   phoneDisplay: "+381 60 123 4567",
   whatsapp: "https://wa.me/381601234567",
   instagram: "https://www.instagram.com/_noor_beauty_center_",
-  address: "Kragujevac, Srbija",
+  instagramHandle: "@_noor_beauty_center_",
+  address: "Milovana Gušića 19/3, Kragujevac, Srbija",
+  workingHours: "Pon–Sub po zakazivanju",
 };
 
 export const services = [
   {
     title: "Manikir",
     description: "Precizan i uredan tretman za negovane i elegantne nokte.",
+    price: "od 1.500 RSD",
   },
   {
     title: "Gel lak",
     description: "Postojan sjaj i besprekoran izgled kroz više nedelja.",
+    price: "od 2.000 RSD",
   },
   {
     title: "Nadogradnja noktiju",
     description: "Oblik, dužina i završna obrada po željenom stilu.",
+    price: "od 3.000 RSD",
+  },
+  {
+    title: "Korekcija",
+    description: "Osvežavanje izgleda i održavanje uredne, postojane forme.",
+    price: "od 2.500 RSD",
   },
 ];
 
