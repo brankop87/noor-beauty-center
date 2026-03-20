@@ -3,6 +3,7 @@ export const siteData = {
   description:
     "Premium beauty studio sa fokusom na negu, estetiku i besprekoran izgled.",
   phone: "+381601234567",
+  phoneDisplay: "+381 60 123 4567",
   whatsapp: "https://wa.me/381601234567",
   instagram: "https://www.instagram.com/_noor_beauty_center_",
   address: "Kragujevac, Srbija",
