@@ -31,6 +31,7 @@ export default function Contact() {
               <a
                 href={siteData.instagram}
                 target="_blank"
+                rel="noreferrer"
                 className="mt-1 block hover:text-white"
               >
                 {siteData.instagramHandle}
@@ -47,7 +48,8 @@ export default function Contact() {
             <a
               href={siteData.whatsapp}
               target="_blank"
-              className="rounded-full bg-[#d5b065] px-6 py-3 text-sm font-semibold text-black"
+              rel="noreferrer"
+              className="rounded-full bg-[#d5b065] px-6 py-3 text-sm font-semibold text-black transition hover:opacity-90"
             >
               WhatsApp
             </a>
@@ -55,6 +57,7 @@ export default function Contact() {
             <a
               href={siteData.instagram}
               target="_blank"
+              rel="noreferrer"
               className="rounded-full border border-[#d5b065]/30 px-6 py-3 text-sm"
             >
               Instagram
@@ -71,6 +74,17 @@ export default function Contact() {
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
+      </div>
+
+      <div className="mx-auto mt-8 flex max-w-7xl justify-start px-1">
+        <a
+          href="https://petkovicsolutions.com"
+          target="_blank"
+          rel="noreferrer"
+          className="text-xs uppercase tracking-[0.22em] text-[#d5b065]/70 transition hover:text-[#d5b065]"
+        >
+          Powered by Petkovic Solutions
+        </a>
       </div>
     </section>
   );
