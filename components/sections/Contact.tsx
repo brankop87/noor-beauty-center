@@ -81,7 +81,7 @@ export default function Contact() {
           href="https://petkovicsolutions.com"
           target="_blank"
           rel="noreferrer"
-          className="relative z-10 inline-flex rounded-md px-1.5 py-1 text-[10px] tracking-[0.12em] text-[#d5b065]/55 underline-offset-4 transition hover:text-[#d5b065]/80 hover:underline"
+          className="relative z-10 inline-flex rounded-md px-1.5 py-1 text-[10px] uppercase tracking-[0.12em] text-[#d5b065]/55 underline-offset-4 transition hover:text-[#d5b065]/80 hover:underline"
         >
           Powered by Petkovic Solutions
         </a>
