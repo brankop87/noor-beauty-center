@@ -80,6 +80,9 @@ export type SiteContent = {
     title: string;
     accent: string;
     intro: string;
+    note: string;
+    whatsappCta: string;
+    instagramCta: string;
   };
   courses: Array<{
     level: string;
@@ -223,10 +226,13 @@ const siteContent: Record<Locale, SiteContent> = {
     ],
     educationSection: {
       eyebrow: "Edukacija",
-      title: "Edukacije koje izgledaju kao ",
-      accent: "premium programi",
+      title: "Edukacije ",
+      accent: "uskoro",
       intro:
-        "Ovo je bitna sekcija sajta jer Noor ne prodaje samo uslugu, nego i znanje. Zato edukacije moraju da deluju ozbiljno, jasno i vredno.",
+        "Edukacije ce uskoro biti dostupne. Za vise informacija i prijave, javi se putem WhatsApp-a ili Instagrama.",
+      note: "Soon education available.",
+      whatsappCta: "Informacije na WhatsApp",
+      instagramCta: "Pitaj na Instagramu",
     },
     courses: [
       {
@@ -377,10 +383,13 @@ const siteContent: Record<Locale, SiteContent> = {
     ],
     educationSection: {
       eyebrow: "Education",
-      title: "Training programs designed like ",
-      accent: "premium experiences",
+      title: "Education coming ",
+      accent: "soon",
       intro:
-        "This section matters because Noor offers not only services, but knowledge as well. The training should therefore feel serious, clear, and valuable.",
+        "Education will be available soon. For more information and early inquiries, reach out via WhatsApp or Instagram.",
+      note: "Soon education available.",
+      whatsappCta: "Ask on WhatsApp",
+      instagramCta: "Ask on Instagram",
     },
     courses: [
       {
