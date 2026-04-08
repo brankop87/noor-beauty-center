@@ -1,38 +1,30 @@
-export default function Reviews() {
-  const reviews = [
-    {
-      name: "Milica S.",
-      text: "Najlepši nokti koje sam ikada imala. Sve je uredno, precizno i trajno.",
-    },
-    {
-      name: "Jelena M.",
-      text: "Katarina radi savršeno, sve preporuke. Salon izgleda premium i oseća se kvalitet.",
-    },
-    {
-      name: "Ana P.",
-      text: "Edukacija je bila vrhunska. Sve jasno objašnjeno i praktično.",
-    },
-  ];
+import type { SiteContent } from "@/data/site";
 
+type ReviewsProps = {
+  content: SiteContent;
+};
+
+export default function Reviews({ content }: ReviewsProps) {
   return (
     <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="mb-4 text-xs uppercase tracking-[0.28em] text-[#d5b065]">
-          Iskustva klijenata
+          {content.reviewsSection.eyebrow}
         </div>
 
         <h2 className="max-w-4xl text-4xl sm:text-6xl">
-          Klijentkinje koje se <span className="italic text-[#d5b065]">vraćaju</span>
+          {content.reviewsSection.title}
+          <span className="italic text-[#d5b065]">{content.reviewsSection.accent}</span>
         </h2>
 
         <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {reviews.map((r) => (
+          {content.reviewsSection.reviews.map((review) => (
             <div
-              key={r.name}
+              key={review.name}
               className="rounded-[24px] border border-[#d5b065]/15 bg-[#2a2320] p-6"
             >
-              <p className="text-sm text-neutral-300 leading-7">“{r.text}”</p>
-              <div className="mt-4 text-sm text-[#d5b065]">{r.name}</div>
+              <p className="text-sm leading-7 text-neutral-300">&quot;{review.text}&quot;</p>
+              <div className="mt-4 text-sm text-[#d5b065]">{review.name}</div>
             </div>
           ))}
         </div>

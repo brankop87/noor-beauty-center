@@ -1,24 +1,28 @@
-import { courses } from "@/data/site";
+import type { SiteContent } from "@/data/site";
 
-export default function Education() {
+type EducationProps = {
+  content: SiteContent;
+};
+
+export default function Education({ content }: EducationProps) {
   return (
     <section id="education" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="mb-4 text-xs uppercase tracking-[0.28em] text-[#d5b065]">
-          Edukacija
+          {content.educationSection.eyebrow}
         </div>
 
         <h2 className="max-w-5xl text-4xl leading-none sm:text-6xl">
-          Edukacije koje izgledaju kao <span className="italic text-[#d5b065]">premium programi</span>
+          {content.educationSection.title}
+          <span className="italic text-[#d5b065]">{content.educationSection.accent}</span>
         </h2>
 
         <p className="mt-5 max-w-3xl text-base leading-8 text-neutral-300">
-          Ovo je bitna sekcija sajta jer Noor ne prodaje samo uslugu, nego i znanje.
-          Zato edukacije moraju da deluju ozbiljno, jasno i vredno.
+          {content.educationSection.intro}
         </p>
 
         <div className="mt-10 grid gap-5">
-          {courses.map((course) => (
+          {content.courses.map((course) => (
             <article
               key={course.title}
               className="rounded-[28px] border border-[#d5b065]/15 bg-[#2a2320] p-7"

@@ -1,24 +1,28 @@
 import Image from "next/image";
-import { galleryImages } from "@/data/site";
+import type { SiteContent } from "@/data/site";
 
-export default function Gallery() {
+type GalleryProps = {
+  content: SiteContent;
+};
+
+export default function Gallery({ content }: GalleryProps) {
   return (
     <section id="gallery" className="py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-12 max-w-2xl text-center">
           <p className="mb-3 text-sm uppercase tracking-[0.28em] text-[#d5b065]">
-            Galerija
+            {content.gallerySection.eyebrow}
           </p>
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            Naši radovi
+            {content.gallerySection.title}
           </h2>
           <p className="mt-4 text-base leading-7 text-white/70 sm:text-lg">
-            Pogledaj deo radova i estetiku koju klijentkinje mogu da očekuju.
+            {content.gallerySection.description}
           </p>
         </div>
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {galleryImages.map((image, index) => (
+          {content.galleryImages.map((image, index) => (
             <div
               key={`${image.src}-${index}`}
               className="group relative overflow-hidden rounded-2xl border border-[#d5b065]/10 bg-white/5"
